@@ -1,0 +1,54 @@
+package com.company;
+
+import java.util.Scanner;
+
+class Итоговоезадание4 {
+    public static void main(String[] args) {
+        String answer;
+        boolean exit;
+        System.out.println("Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает?");
+        Scanner inputAnswer = new Scanner(System.in);
+
+        exit = false;
+        for (int i = 1; i <= 3; i++) {
+            if (exit == true)
+                break;
+            answer = inputAnswer.next();
+            switch (answer) {
+                case ("Вирус"):
+                    System.out.println("Правильно!");
+                    exit = true;
+                    break;
+                case ("Сдаюсь"):
+                    System.out.println("Правильный ответ: Вирус.");
+                    exit = true;
+                    break;
+                case ("Подсказка"):
+                    System.out.println("Только не вводи: Вирус");
+                    Scanner inputAnswer2 = new Scanner(System.in);
+                    exit = false;
+                    for (int o = 1; o <= 2; i++) {
+                        if (exit == true)
+                            break;
+                        answer = inputAnswer2.next();
+                        switch (answer) {
+                            case ("Вирус"):
+                                System.out.println("Правильно!");
+                                exit = true;
+                                break;
+                            case ("Сдаюсь"):
+                                System.out.println("Правильный ответ: Вирус.");
+                                exit = true;
+                                break;
+                            default:
+                                System.out.println("Приходи в другой раз.");
+                                inputAnswer2.close();
+                        }
+                    }
+                default:
+                    System.out.println("Подумай еще.");
+
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+import java.util.Arrays;
+public class Задание3 {
+    public static void main(String[] args)
+    {
+//Задайте массив из 5 любых целых чисел.
+        int[] array = {1,2,3,4,5};
+        System.out.println(Arrays.toString(array));
+//Поменяйте местами первый и последний элемент в массиве.
+        int x = array[0];
+        array[0] = array[array.length-1];
+        array[array.length-1] = x;
+        System.out.println(Arrays.toString(array));
+//sum
+        int y = array[0] + array[2];
+        System.out.println("Сумма первого и среднего элемента массива = " + y);
+    }
+}

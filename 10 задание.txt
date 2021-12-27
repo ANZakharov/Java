@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+ class Задание10 {
+    public static void main (String[] args) {
+        int sum = 0;
+        int count = 0;
+        int a, b;
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите количество строк матрицы: ");
+        a = in.nextInt();
+
+        System.out.print("Введите количество столбцов матрицы: ");
+        b = in.nextInt();
+
+
+        int[][] arr = new int[a][b];
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print("Введите элемент массива[" + i + "][" + j + "]:");
+                arr[i][j] = in.nextInt();
+            }
+        }
+        in.close();
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + "\t");
+                if (arr[i][j] > 0) {
+                    sum += arr[i][j];
+                    count++;
+                }
+            }
+            System.out.println();
+        }
+        int q = sum / count++;
+        System.out.println("Cреднее арифметическое элементов массива : " +q);
+//Вывести массива на экран, где каждый элемент массива умножается на среднее арифметическое
+//        System.out.println(arr);
+    }
+}
