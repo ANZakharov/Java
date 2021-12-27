@@ -1,0 +1,44 @@
+package com.company;
+
+import java.util.Scanner;
+public class Задание6 {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Выберите что переводить: 1 - масса, 2 - расстояние ");
+        int input = in.nextInt();
+        if (input == 1) {
+            System.out.println("Выберите единицу измерения: 1 - кг, 2 - г");
+            int x = scanner.nextInt();
+            if (x == 1 || x == 2) {
+                System.out.println("Введите число");
+                double y = scanner.nextInt();
+                if (x == 1) {
+                    System.out.println("Кг = " + y);
+                    System.out.println("Г = " + y * 1000);
+                } else if (x == 2) {
+                    System.out.println("Кг = " + y / 1000);
+                    System.out.println("Г = " + y);
+                }
+            }
+        } else if (input == 2) {
+            System.out.println("Выберите единицу измерения: 1 - метр, 2 - миля");
+            int z = scanner.nextInt();
+            if (z == 1 || z == 2) {
+                System.out.println("Введите число");
+                float t = Math.round(scanner.nextInt());
+                if (z == 1) {
+                    System.out.println("Метр = " + t);
+                    System.out.printf("Миля = " + t*0,0006);
+                } else if (z == 2) {
+                    System.out.printf("Метр = " + t/0,0006);
+                    System.out.println("Миля = " + t);
+                }
+//Итог вычисления: бесконечное значение. Передеть через переменную и ограничить вычисление 2мя знаками после запятой                
+            }
+        } else {
+            System.out.println("Неверный выбор");
+        }
+    }
+}

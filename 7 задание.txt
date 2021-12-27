@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+class Задание7 {
+    static Scanner scanner = new Scanner(System.in);
+    //Пользователь вводит размер массива и данные с клавиатуры в массив
+    public static void main(String[] args) {
+        int x = 1;
+        int y = 2;
+        int z = 3;
+        System.out.print("Задайте размер массива: ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] input = new int[n];
+        for (int i = 0; i < input.length; i++) {
+            input[i] = sc.nextInt();
+        }
+        System.out.println(Arrays.toString(input));
+//Сравнить элементы массива с заранее заданными константами x, y, z.
+//Нашел как сделать через boolean, требуется вывод: "Данное значение имеется в константах"
+        System.out.println("Result: "+result(input, x, y, z));
+    }
+    public static boolean result(int[] i, int x, int y, int z ) {
+        for (int number : i) {
+            boolean r = number != x && number != y && number != z;
+            if (r) {
+                return false;
+            }
+        }
+        return true;
+    }
+}

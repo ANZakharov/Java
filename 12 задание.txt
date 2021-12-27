@@ -1,0 +1,19 @@
+package com.company;
+import java.util.Scanner;
+
+
+class Задание12 {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.println("Введите 'I like Java !!!'”:  "
+                +
+                "");
+        String name = console.nextLine();
+        String substring = "Java";
+        String substring2 = "I like";
+        String substring3 = "!!!";
+        System.out.println(name.contains(substring));
+        System.out.println(name.startsWith(substring2));
+        System.out.println(name.endsWith(substring3));
+        }
+    }

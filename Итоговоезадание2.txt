@@ -1,0 +1,38 @@
+package com.company;
+
+import java.util.Scanner;
+
+class Итоговоезадание2 {
+    public static void main(String[] args) {
+        double a, b, c;
+        double D;
+        System.out.println("Программа решает квадратное уравнение вида:\"a+(-)b=с\"");
+        System.out.println("Введите a, b и c:");
+        Scanner in = new Scanner(System.in);
+        a = in.nextDouble();
+        b = in.nextDouble();
+        c = in.nextDouble();
+        String substring3 = "=";      // иначе close
+        String substring1 = "+";
+//        D = c - b;
+//        X = c + b;
+//        F = c - a;
+//        G = a - c;
+//        H = a + b;
+//        J = a - b;
+        String konv = String.valueOf(a);
+        if ( konv = x && substring1 = +) {
+            double x1;
+            x1 = (c -b);
+            System.out.println(x1);
+        }
+        else if (konv = x && substring1 = -) {
+            double x2;
+            x2 = (c + b);
+            System.out.println(x2);
+        }
+        else {
+            System.out.println("Уравнение уходит !");
+        }
+    }
+}

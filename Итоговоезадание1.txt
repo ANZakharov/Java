@@ -1,0 +1,15 @@
+package com.company;
+
+import java.util.Scanner;
+public class Итоговоезадание1 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите курс доллара :");
+        float s1 = in.nextFloat();
+        System.out.println("Введите сумму :");
+        float s2 = in.nextFloat();
+        double r = s2/s1;
+        System.out.printf("Итого: %.2f", r);
+    }
+}
